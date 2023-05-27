@@ -16,7 +16,7 @@
         <div class="container">
             <?php
             include 'connection.php';
-            // $no = 1;
+            $no = 1;
             $query = "SELECT *FROM `students`;";
             $result = mysqli_query($conn, $query) or die("Query Faild..");
 
@@ -46,7 +46,7 @@
                             <td>
                         </tr>
                 <?php
-                        // $no++;
+                        $no++;
                     }
                 } else {
                     echo "<h2> No Records Found..</h2>";
@@ -56,6 +56,8 @@
                 <hr>
                 <button><a href="insert.php">INSERT</a></button>
                 <hr>
+                <button><a href="search.php">SEARCH</a></button>
+                <hr> 
         </div>
     </center>
 </body>
